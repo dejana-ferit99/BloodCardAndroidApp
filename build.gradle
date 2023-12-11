@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+    }
+
+    ext{
+        navigation_version = '2.5.0'
+        navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+        navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:$navigation_version"
+        koin_version = "3.1.5"
+        lifecycle_scope_version = "2.4.1"
+        lifecylce_scope = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_scope_version"
+        koin = "io.insert-koin:koin-android:$koin_version"
+        navigation_safe_args_gradle_plugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${navigation_version}"
+
+
+        koin_navigation = "io.insert-koin:koin-androidx-navigation:$koin_version"
+    }
+
+    dependencies {
+        classpath navigation_safe_args_gradle_plugin
+        classpath 'com.google.gms:google-services:4.4.0'
+
+    }
+}
+plugins {
+    id 'com.android.application' version '8.1.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+    id 'com.android.library' version '7.2.2' apply false
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin' version '2.0.0' apply false
+}

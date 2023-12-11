@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.auth.RegisterFragment"
+        android:background="@color/white">
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello! Welcom to registration page."
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:layout_marginVertical="50dp"
+        android:layout_marginHorizontal="20dp" />
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter required data in the fileds."
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:layout_editor_absoluteX="-16dp"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nameHolder"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toBottomOf="@id/title1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/gray" >
+        <TextView
+            android:id="@+id/nameTitle"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:text="Enter name"
+            android:layout_marginVertical="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="13sp"
+            android:hint="Type your name here..."
+            android:textColorHint="@color/black"
+            android:layout_marginVertical="15dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:inputType="text" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/surnameHolder"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toBottomOf="@id/nameHolder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/gray"
+        >
+        <TextView
+            android:id="@+id/surnameTitle"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:text="Enter surname"
+            android:layout_marginVertical="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/surname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="13sp"
+            android:hint="Type your surname here..."
+            android:textColorHint="@color/black"
+            android:layout_marginVertical="15dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:inputType="text" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dateOfBirthHolder"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/surnameHolder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/gray"
+        >
+        <TextView
+            android:id="@+id/dateOfBirthTitle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Enter date of birth"
+            android:layout_marginVertical="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <DatePicker
+            android:id="@+id/dateOfBirth"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textSize="13sp"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            android:textColorHint="@color/black"
+            android:layout_marginVertical="15dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:inputType="text" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bloodTypeHolder"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toBottomOf="@id/dateOfBirthHolder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/gray"
+        >
+        <TextView
+            android:id="@+id/bloodTypeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:text="Enter blood type"
+            android:layout_marginVertical="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/bloodType"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="13sp"
+            android:hint="Type your blood type here..."
+            android:textColorHint="@color/black"
+            android:layout_marginVertical="15dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:inputType="text" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/genderHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bloodTypeHolder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/gray"
+        >
+        <TextView
+            android:id="@+id/genderTitle"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:text="Enter gender (M/F)"
+            android:layout_marginVertical="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/genderPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/genderTitle"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+            <RadioButton
+                android:id="@+id/genderMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/black"
+                android:text="M"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
+            <RadioButton
+                android:id="@+id/genderFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/black"
+                android:text="F"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
+        </RadioGroup>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/emailHolder"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toBottomOf="@id/genderHolder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/gray"
+        >
+        <TextView
+            android:id="@+id/emailTitle"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:text="Enter email"
+            android:layout_marginVertical="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="13sp"
+            android:hint="Type your email here..."
+            android:textColorHint="@color/black"
+            android:layout_marginVertical="15dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/passwordHolder"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toBottomOf="@id/emailHolder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/gray"
+        >
+
+        <TextView
+            android:id="@+id/passwordTitle"
+            android:layout_width="match_parent"
+            android:layout_height="20sp"
+            android:text="Enter password (at least 6 caracters)"
+            android:layout_marginVertical="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/passwordET"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="13sp"
+            android:hint="Type your password here..."
+            app:layout_constraintTop_toBottomOf="@+id/passwordTitle"
+            android:textColorHint="@color/black"
+            android:layout_marginVertical="15dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:inputType="textPassword"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintTop_toBottomOf="@id/passwordHolder"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:backgroundTint="@color/red"
+        android:textAlignment="center"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginEnd="20dp"
+        />
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return to login"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton"
+        android:backgroundTint="@color/black"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

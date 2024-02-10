@@ -39,10 +39,6 @@ class UserRepository: IUserRepository{
 
     }
 
-    override fun Update(user: User) {
-        TODO("Not yet implemented")
-    }
-
     override fun GetAllUsers(): MutableLiveData<MutableList<User>> {
         userCollection.get().addOnCompleteListener {
             task ->

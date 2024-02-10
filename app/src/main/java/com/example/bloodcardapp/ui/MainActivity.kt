@@ -3,7 +3,6 @@ package com.example.bloodcardapp.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.bloodcardapp.R
 import com.example.bloodcardapp.databinding.ActivityMainBinding
 import com.example.bloodcardapp.viewmodel.BloodCardViewModel
 import com.google.firebase.auth.FirebaseAuth

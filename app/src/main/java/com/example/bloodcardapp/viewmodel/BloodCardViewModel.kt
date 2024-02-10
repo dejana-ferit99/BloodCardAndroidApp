@@ -17,9 +17,6 @@ class BloodCardViewModel(
         users = userRepository.GetAllUsers()
         return user
     }
-    fun update(user: User){
-        userRepository.Update(user)
-    }
     fun login(email:String, password:String){
         userRepository.Login(email, password)
     }

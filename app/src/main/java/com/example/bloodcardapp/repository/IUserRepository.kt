@@ -5,7 +5,6 @@ import com.example.bloodcardapp.model.User
 
 interface IUserRepository {
     fun Save(user: User, password: String)
-    fun Update(user: User)
     fun GetAllUsers(): MutableLiveData<MutableList<User>>
     fun Login(email: String, password: String)
     fun GetUserByID(id: String): User?
